@@ -57,6 +57,12 @@ Note:
 ## Callback функции
 
 
+```javascript
+function showUser(user) {
+  username.innerText = user.name;
+}
+getCurrentUser(showUser);
+```
 
 
 Note:
