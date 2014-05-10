@@ -229,13 +229,13 @@ function getFriendStatuses(callback) {
   }
   function getFriendStatus(friend, friendIndex) {
     getStatus(friend, addStatus);
-  }
-  function addStatus(err, status) {
-    if (err) return callback(err);
-    statuses[friendIndex] = status;
-    statusCount += 1;
-    if (statusCount == statuses.length)
-      callback(statuses);
+    function addStatus(err, status) {
+      if (err) return callback(err);
+      statuses[friendIndex] = status;
+      statusCount += 1;
+      if (statusCount == statuses.length)
+        callback(statuses);
+    }
   }
 }
 ```
@@ -316,32 +316,18 @@ promise.then(function(val) {
 ## Грешки?
 
 ```javascript
-getCurrentUser(showUser);
-function showUser(err, user) {
-  if (err) showError(err);
-  else showUser(user);
-}
-```
-
-vs
-
-```javascript
 getCurrentUser().then(showUser, showError);
 function showUser(user) {
   username.innerText = user.name;
 }
 ```
-Note:
-Следен слајд е дискусија што добиваме
-
--~~-
-# Што добивме?
-
 * showUser сега веќе не се занимава со грешките,
 * showError можеме да ја употребиме директно
 
 Note:
 Дали ова е доволно подобрување?
+
+
 
 -~~-
 # Не е доволно!
