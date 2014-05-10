@@ -147,8 +147,12 @@ Note:
 
 
 -~~-
+## Решение 2: Moar callbacks!
 
-## Решение 2: Повеќе callbacks
+![moar-callbacks](moar-callbacks.jpg)
+
+-~~-
+## Решение 2: Moar callbacks!
 
 
 ```javascript
@@ -242,6 +246,14 @@ function getFriendStatuses(callback) {
 
 Note: No comment. Исто така, што ако серверот згреши два пати?
 Ова не е решение. Што е вистинското решение?
+
+
+
+-~~-
+
+![callback-dawg](callback-dawg.jpg)
+
+
 
 -~~-
 # Вистинско решение
